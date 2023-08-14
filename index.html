@@ -3,15 +3,35 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/style.css" type="text/css">
+<script src="index.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
 
     <div class="bg">
         <div id="overlay">
-            <h1>HELLO</h1>
+
+            <div id="cell2">
+                <a class="ghost-button-semi-transparent" onClick="getQuote('happiness')" href="#">I Need Motivation</a>
+                <a class="ghost-button-semi-transparent" onClick="getQuote('humor')" href="#">I Want to Laugh</a>
+                <a class="ghost-button-semi-transparent" onClick="getQuote('courage')" href="#">I Need Courage</a>
+                <a class="ghost-button-semi-transparent" onClick="getQuote('fear')" href="#">I Am Afraid</a>
+                <a class="ghost-button-semi-transparent" onClick="getQuote('failure')" href="#">I Made a Mistake</a>
+                <a class="ghost-button-semi-transparent" onClick="getQuote('hope')" href="#">I Need Hope</a>
+            </div>
+
+            <div id="cell5">
+                <div id="quoteDiv">
+                    <h1 id="quote">Choose a quote category to get started!</h1>
+                </div>
+                <div id="authorDiv">
+                    <h1 id="author">By Kent Howell</h1>
+                </div>
+            </div>
+
         </div>
+
         <p class="caption">Photo by Serkan Bayraktar: https://www.pexels.com/photo/scenic-landscape-with-rocky-dessert-and-sand-8519499/</p>
     </div>
-
 </body>
 </html>
