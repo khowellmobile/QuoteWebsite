@@ -14,8 +14,14 @@ function getQuote(quoteType) {
 }
 
 function postQuote(quote) {
+    //startImageTransition();
     console.log(quote[0]);
 
     document.getElementById('quote').innerHTML = quote[0]['quote'];
     document.getElementById('author').innerHTML = '-' + quote[0]['author'];
+    document.getElementById('bg').style.backgroundImage="url(/images/scenicImage2.jpg)";
+}
+
+function startImageTransition() {
+    document.getElementById('overlay').style.backgroundColor="rgba(255, 255, 255, 0.1)";
 }
