@@ -1,3 +1,6 @@
+var delay = 3000;
+var pointer = 0;
+
 function getQuote(quoteType) {
     $.ajax({
         method: 'GET',
@@ -14,7 +17,7 @@ function getQuote(quoteType) {
 }
 
 function postQuote(quote) {
-    //startImageTransition();
+    startImageTransition();
     console.log(quote[0]);
 
     document.getElementById('quote').innerHTML = quote[0]['quote'];
@@ -23,5 +26,13 @@ function postQuote(quote) {
 }
 
 function startImageTransition() {
-    document.getElementById('overlay').style.backgroundColor="rgba(255, 255, 255, 0.1)";
+    document.getElementById('overlay').style.backgroundColor="rgba(255, 255, 255, 0.5)";
 }
+
+setInterval(function() {
+    var selectedBg = $('.bg:not(.active)')
+      , image      = "/images/scenicImage" + pointer % 7 + ".jpg ";
+    $('.bg.active').removeClass('active');
+    selectedBg.css({'backgroundImage':"url("+image+")"}).addClass('active');
+    pointer += 1;
+}, delay);
